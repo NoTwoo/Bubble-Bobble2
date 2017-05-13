@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Movie">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game\Entry Point">
+      <UniqueIdentifier>{4ab83b3a-e971-4ede-9469-2a7e369da81d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameManager">
+      <UniqueIdentifier>{0f96f733-580a-48c3-bc01-d26b129dd8e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SoundManager">
+      <UniqueIdentifier>{c5d1ef5a-9eaa-4ba1-8681-c01efd6ef839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SceneManager">
+      <UniqueIdentifier>{a02bbda3-e3a6-40c1-9fbb-a5c9b999cfcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\DBManager">
+      <UniqueIdentifier>{0a4bbf02-6e80-47ce-8706-5f5fc49a856c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\BitmapManager">
+      <UniqueIdentifier>{54e22b48-f0ef-44e7-957e-af40a26a6166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SceneManager\Scene">
+      <UniqueIdentifier>{e52ce2da-3dbe-414b-8d25-e8c4ae9c22ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameManager\Object">
+      <UniqueIdentifier>{fef58653-23c3-405d-9c74-755321290880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\BitmapManager\Bitmap">
+      <UniqueIdentifier>{425be279-c8d1-47f2-9c86-1200f871f90d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Design Pattern">
+      <UniqueIdentifier>{d623b841-cf50-4b07-978b-bdae09f8e237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ReadMe">
+      <UniqueIdentifier>{df52109a-1b4b-47a9-8389-775c6e331734}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="client_main.cpp">
+      <Filter>Game\Entry Point</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameManager.cpp">
+      <Filter>Game\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CBitmap.cpp">
+      <Filter>Game\BitmapManager\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="CBitmapManager.cpp">
+      <Filter>Game\BitmapManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBManager.cpp">
+      <Filter>Game\DBManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>Game\SceneManager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CObject.cpp">
+      <Filter>Game\GameManager\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager.cpp">
+      <Filter>Game\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundManager.cpp">
+      <Filter>Game\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CFactory.cpp">
+      <Filter>Game\Design Pattern</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CGameManager.h">
+      <Filter>Game\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CBitmap.h">
+      <Filter>Game\BitmapManager\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="CBitmapManager.h">
+      <Filter>Game\BitmapManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CDBManager.h">
+      <Filter>Game\DBManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>Game\SceneManager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CObject.h">
+      <Filter>Game\GameManager\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneManager.h">
+      <Filter>Game\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundManager.h">
+      <Filter>Game\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="CFactory.h">
+      <Filter>Game\Design Pattern</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>ReadMe</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
