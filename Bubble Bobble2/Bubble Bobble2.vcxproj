@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -145,29 +145,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CBitmap.cpp" />
     <ClCompile Include="CBitmapManager.cpp" />
     <ClCompile Include="CGameManager.cpp" />
     <ClCompile Include="client_main.cpp" />
     <ClCompile Include="CDBManager.cpp" />
+    <ClCompile Include="CIntro.cpp" />
+    <ClCompile Include="CMenu.cpp" />
+    <ClCompile Include="CNPC.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CObject.cpp" />
     <ClCompile Include="CSceneManager.cpp" />
     <ClCompile Include="CSoundManager.cpp" />
     <ClCompile Include="CFactory.cpp" />
+    <ClCompile Include="CItem.cpp" />
+    <ClCompile Include="CPannel.cpp" />
+    <ClCompile Include="CText.cpp" />
+    <ClCompile Include="CStage1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CBitmap.h" />
     <ClInclude Include="CBitmapManager.h" />
     <ClInclude Include="CGameManager.h" />
     <ClInclude Include="CDBManager.h" />
+    <ClInclude Include="CIntro.h" />
+    <ClInclude Include="CMenu.h" />
+    <ClInclude Include="CNPC.h" />
+    <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CObject.h" />
     <ClInclude Include="CSceneManager.h" />
     <ClInclude Include="CSoundManager.h" />
     <ClInclude Include="CFactory.h" />
+    <ClInclude Include="CText.h" />
+    <ClInclude Include="enum.h" />
     <ClInclude Include="global.h" />
+    <ClInclude Include="CItem.h" />
     <ClInclude Include="macro.h" />
+    <ClInclude Include="CPannel.h" />
+    <ClInclude Include="CStage1.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

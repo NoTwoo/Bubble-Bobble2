@@ -3,7 +3,12 @@
 #include <stdio.h>
 #include <iostream>
 #include <map>
-#include<windows.h>
+#include <atlimage.h>
+#include <algorithm>
+#include <iterator>
+#include <windows.h>
+#include <atlstr.h>
+#include <Vfw.h>
 
 using namespace std;
 
@@ -12,12 +17,15 @@ using namespace std;
 #include "CSoundManager.h"
 #include "CDBManager.h"
 #include "CBitmapManager.h"
+#include "CIntro.h"
 
 #include "CFactory.h"
 #include "CObject.h"
 #include "CScene.h"
-#include "CBitmap.h"
+#include "CStage1.h"
 #include "macro.h"
+#include "enum.h"
+
 
 ///
 #define GAMEMANAGER CGameManager::GetInstance()
@@ -25,4 +33,3 @@ using namespace std;
 #define DBMANAGER CDBManager::GetInstance()
 #define SOUNDMANAGER CSoundManager::GetInstance()
 #define BITMAPMANAGER CBitmapManager::GetInstance()
-#define FACTORY CFactory::GetInstance()

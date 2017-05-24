@@ -11,7 +11,7 @@ void CSoundManager::soundsetup()
 
 	//사운드 경로
 	for (int i = 0; i<SD_END; i++){
-		sprintf(str, "Sound\\Sound%d.mp3", i + 1);
+		sprintf_s(str, "Sound\\Sound%d.mp3", i + 1, lstrlen(str));
 		//SetWindowText(GAMEMANAGER->getWndHandle(), str);
 		FMOD_System_CreateStream(this->g_psystem, str, FMOD_LOOP_NORMAL, 0, &this->g_psound[i]);
 	}
@@ -40,7 +40,7 @@ void CSoundManager::effsoundsetup()
 
 	//사운드 경로
 	for (int i = 0; i<EFFSD_END; i++){
-		sprintf(str, "Sound\\effsound%d.wav", i + 1);
+		sprintf_s(str, "Sound\\effsound%d.wav", i + 1, lstrlen(str));
 		FMOD_System_CreateSound(this->effg_psystem, (const char*)str, FMOD_DEFAULT, 0, &this->effg_psound[i]);
 	}
 }

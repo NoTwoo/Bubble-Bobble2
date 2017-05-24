@@ -2,9 +2,11 @@
 
 CGameManager* CGameManager::m_instance = nullptr;
 
-CGameManager* CGameManager::GetInstance()
-{
-	if (m_instance == nullptr)
-		m_instance = new CGameManager();
-	return m_instance;
+void  CGameManager::Initiallize(const HWND& a_hWnd)
+{ 
+	m_hWnd = a_hWnd; 
+	BITMAPMANAGER->Initiallize();
+	SCENEMANAGER->SetState(INTRO);
 }
+
+void CGameManager::Update(){ SCENEMANAGER->Update(); }

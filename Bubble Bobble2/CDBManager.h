@@ -3,7 +3,13 @@
 class CDBManager
 {
 public:
-	static CDBManager* GetInstance() {}
+	static CDBManager* GetInstance()
+	{
+		if (m_instance == nullptr)
+			m_instance = new CDBManager;
+
+		return m_instance;
+	}
 public:
 	void Initiallize();
 	void Update();

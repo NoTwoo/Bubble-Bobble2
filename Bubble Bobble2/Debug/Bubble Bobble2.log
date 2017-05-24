@@ -1,2 +1,14 @@
-﻿  Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.exe
+﻿  CIntro.cpp
+  CGameManager.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  client_main.cpp
+  CStage1.cpp
+  CSoundManager.cpp
+  CSceneManager.cpp
+  CObject.cpp
+  CFactory.cpp
+  CDBManager.cpp
+  CBitmapManager.cpp
+  Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.exe
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.pdb (Partial PDB)
