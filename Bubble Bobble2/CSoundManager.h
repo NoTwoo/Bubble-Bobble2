@@ -30,6 +30,11 @@ enum EFFSOUNDKIND
 
 class CSoundManager
 {
+
+public:
+	void Initialize();
+	void Release();
+
 public:
 	FMOD_SYSTEM* GetBgmSystem() { return g_psystem; }
 	FMOD_SOUND** GetBgmSound() { return g_psound; }
@@ -46,10 +51,22 @@ public:
 	void BGsoundoff();
 	void effplaysound(EFFSOUNDKIND esound);
 
+public:
+	static CSoundManager* GetInstance()
+	{
+		if (m_instance == nullptr)
+			m_instance = new CSoundManager;
+
+		return m_instance;
+	}
+
 private:
 	CSoundManager() {};
+	~CSoundManager();
+
 	CSoundManager(const CSoundManager&) = delete;
 	void operator=(const CSoundManager&) = delete;
+	static CSoundManager* m_instance;
 
 private:
 	FMOD_SYSTEM* g_psystem;

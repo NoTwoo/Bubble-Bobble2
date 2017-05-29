@@ -20,12 +20,13 @@ public:
 	void Render();
 	void Release();
 public:
-	std::map<CString, CImage>& GetImage();
+	std::map<CString, CImage*>& GetImage();
 private:
-	std::map<CString, CImage> m_map;
+	std::map<CString, CImage*> m_map;
 
 private:
 	CBitmapManager() {};
+	~CBitmapManager();
 	CBitmapManager(const CBitmapManager&) = delete;
 	void operator=(const CBitmapManager&) = delete;
 

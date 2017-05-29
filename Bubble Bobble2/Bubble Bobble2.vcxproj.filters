@@ -181,6 +181,9 @@
     <ClInclude Include="CIntro.h">
       <Filter>Game\SceneManager\Scene\Intro</Filter>
     </ClInclude>
+    <ClInclude Include="CCharacter.h">
+      <Filter>Game\GameManager\Object\Character</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt">

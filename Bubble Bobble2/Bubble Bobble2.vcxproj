@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBitmapManager.h" />
+    <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CGameManager.h" />
     <ClInclude Include="CDBManager.h" />
     <ClInclude Include="CIntro.h" />

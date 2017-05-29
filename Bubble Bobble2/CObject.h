@@ -1,7 +1,9 @@
 #pragma once
+
 #include "enum.h"
 #include "macro.h"
-class COject
+
+class CObject
 {
 public:
 	virtual void Initiallize() = 0;
@@ -10,10 +12,17 @@ public:
 	virtual void Release() = 0;
 
 public:
-	const POINT& GetPos() const;
-	const RECT& GetRect() const;
-	void SetPos(const POINT a_pos);
-	void SetRect(const RECT a_rect);
+	const ObjType& GetObjType() const { return m_ObjType; };
+	const POINT& GetPos() const { return m_pos; };
+	const RECT& GetRect() const { return m_rect; };
+
+public:
+	void SetObjType(const ObjType a_ObjType) { m_ObjType = a_ObjType; };
+	void SetPos(const POINT a_pos) { m_pos = a_pos; };
+	void SetRect(const RECT a_rect) { m_rect = a_rect; };
+
+public:
+	//virtual ~CObject() = 0;
 
 protected:
 	ObjType m_ObjType;

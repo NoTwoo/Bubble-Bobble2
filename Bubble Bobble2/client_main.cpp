@@ -31,18 +31,17 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance
 
 	GAMEMANAGER->Initiallize(hWnd);
 
+	DWORD dwTime = GetTickCount();
+
 	memset(&Message, 0, sizeof(Message));
-	while (Message.message != WM_QUIT)
-	{
-		if (PeekMessage(&Message, NULL, 0, 0, PM_REMOVE))
-		{
+	while (Message.message != WM_QUIT){
+		if (PeekMessage(&Message, NULL, 0, 0, PM_REMOVE)){
 			TranslateMessage(&Message);
 			DispatchMessage(&Message);
 		}
 
-		else
-		{
-			GAMEMANAGER->Update();
+		else{
+			if(dwTime + 0 < GetTickCount()) GAMEMANAGER->Update();
 		}
 
 	}
@@ -54,6 +53,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	switch (iMessage) {
 	case WM_CREATE:
 		return 0;
+
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		return 0;

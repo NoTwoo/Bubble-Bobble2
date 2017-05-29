@@ -18,13 +18,18 @@ using namespace std;
 #include "CDBManager.h"
 #include "CBitmapManager.h"
 #include "CIntro.h"
+#include "CMenu.h"
 
 #include "CFactory.h"
 #include "CObject.h"
+#include "CCharacter.h"
+#include "CPlayer.h"
+#include "CNPC.h"
 #include "CScene.h"
 #include "CStage1.h"
 #include "macro.h"
 #include "enum.h"
+
 
 
 ///

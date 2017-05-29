@@ -17,6 +17,8 @@ public:
 	void Update();
 	void Render();
 	void Release();
+
+
 private:
 	CSceneManager();
 	~CSceneManager();
@@ -27,4 +29,5 @@ private:
 
 private:
 	CScene* m_Scene;
+	SCENE_ID m_SceneID;
 };

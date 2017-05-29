@@ -4,15 +4,15 @@
 
 void CIntro::Initialize()
 {
-	m_hVideo = MCIWndCreate(GAMEMANAGER->GethWnd(), NULL, MCIWNDF_NOPLAYBAR | WS_VISIBLE | WS_CHILD,
+	m_hVideo = MCIWndCreate(GAMEMANAGER->GethWnd(), NULL, MCIWNDF_NOTIFYPOS | MCIWNDF_NOPLAYBAR | WS_VISIBLE | WS_CHILD,
 		"Resources\\Movie\\Intro.wmv");
 	MoveWindow(m_hVideo, 0, 0, WINDOWS_WIDTH, WINDOWS_HEIGHT, NULL);
-	MCIWndPlay(m_hVideo);
+	if(m_hVideo) MCIWndPlay(m_hVideo);
 }
 
 SCENE_ID CIntro::Update()
 {
-	if (GetAsyncKeyState(VK_RETURN)) return MENU;
+	if (GetAsyncKeyState(VK_RETURN)) return STAGE1;
 
 	return NOTHING;
 }

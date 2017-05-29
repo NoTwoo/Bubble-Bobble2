@@ -1,14 +1,19 @@
-﻿  CIntro.cpp
+﻿  CSoundManager.cpp
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\csoundmanager.cpp(25): warning C4101: 'str': unreferenced local variable
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\csoundmanager.cpp(53): warning C4101: 'str': unreferenced local variable
+  CPlayer.cpp
   CGameManager.cpp
   Generating Code...
-  Skipping... (no relevant changes detected)
+  Compiling...
   client_main.cpp
   CStage1.cpp
-  CSoundManager.cpp
   CSceneManager.cpp
   CObject.cpp
+  CMenu.cpp
+  CIntro.cpp
   CFactory.cpp
   CDBManager.cpp
   CBitmapManager.cpp
+  Generating Code...
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.exe
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.pdb (Partial PDB)
