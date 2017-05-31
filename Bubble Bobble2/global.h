@@ -29,7 +29,7 @@ using namespace std;
 #include "CStage1.h"
 #include "macro.h"
 #include "enum.h"
-
+#include "CBubble.h"
 
 
 ///

@@ -12,7 +12,7 @@ void CIntro::Initialize()
 
 SCENE_ID CIntro::Update()
 {
-	if (GetAsyncKeyState(VK_RETURN)) return STAGE1;
+	if (GetAsyncKeyState(VK_RETURN)) return MENU;
 
 	return NOTHING;
 }

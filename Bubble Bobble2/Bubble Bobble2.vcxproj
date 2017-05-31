@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CBitmapManager.cpp" />
+    <ClCompile Include="CBubble.cpp" />
     <ClCompile Include="CGameManager.cpp" />
     <ClCompile Include="client_main.cpp" />
     <ClCompile Include="CDBManager.cpp" />
@@ -165,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBitmapManager.h" />
+    <ClInclude Include="CBubble.h" />
     <ClInclude Include="CCharacter.h" />
     <ClInclude Include="CGameManager.h" />
     <ClInclude Include="CDBManager.h" />

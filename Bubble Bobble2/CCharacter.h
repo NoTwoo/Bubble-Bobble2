@@ -14,5 +14,4 @@ public:
 protected:
 	WORD m_Speed;
 	BYTE m_XCnt, m_YCnt;
-	DWORD m_Time;
 };

@@ -28,4 +28,6 @@ protected:
 	ObjType m_ObjType;
 	POINT m_pos;
 	RECT m_rect;
+protected:
+	DWORD m_Time;
 };

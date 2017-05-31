@@ -26,6 +26,9 @@ public:
 	CPlayer& GetPlayer() { return m_Player; }
 public:
 	void SethWnd(HWND m_hWnd) { this->m_hWnd = m_hWnd; }
+
+public:
+	void GameExit() { PostQuitMessage(0); }
 private:
 	HDC m_hDC, m_hMemDC;
 	HBITMAP m_hBit, m_hOldBit;

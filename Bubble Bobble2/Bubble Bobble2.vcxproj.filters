@@ -69,6 +69,9 @@
     <Filter Include="Game\SceneManager\Scene\Intro">
       <UniqueIdentifier>{2a353d2f-b74f-46f9-80d4-d3e1759a7092}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameManager\Object\Bubble">
+      <UniqueIdentifier>{84ac89f5-bad7-4ddb-8110-ee1df2fbdfd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client_main.cpp">
@@ -121,6 +124,9 @@
     </ClCompile>
     <ClCompile Include="CIntro.cpp">
       <Filter>Game\SceneManager\Scene\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="CBubble.cpp">
+      <Filter>Game\GameManager\Object\Bubble</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +189,9 @@
     </ClInclude>
     <ClInclude Include="CCharacter.h">
       <Filter>Game\GameManager\Object\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CBubble.h">
+      <Filter>Game\GameManager\Object\Bubble</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

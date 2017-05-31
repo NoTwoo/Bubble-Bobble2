@@ -27,6 +27,35 @@ void CBitmapManager::Initiallize()
 
 	}
 
+	{
+		for (int i = 0; i < NUM_OF_MENU; ++i) {
+			CImage* tempImg = new CImage;
+			CString str;
+			CString Key;
+			Key.Format("Menu%dImg", i + 1);
+			str.Format("Resources\\Images\\Menu\\Menu%dImg.png", i + 1);
+			tempImg->Load(str);
+			m_map.insert(make_pair(Key, tempImg));
+
+		}
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\Attack\\BubbleMoveImg.png");
+		m_map.insert(make_pair("BubbleMoveImg", tempImg));
+
+
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\Attack\\PlayerShootBubbleImg.png");
+		m_map.insert(make_pair("PlayerShootBubbleImg", tempImg));
+
+
+	}
+
 }
 void CBitmapManager::Update()
 {
