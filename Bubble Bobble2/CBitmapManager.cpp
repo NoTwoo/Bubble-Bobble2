@@ -9,23 +9,29 @@ void CBitmapManager::Initiallize()
 		CString str;
 		CString Key;
 		Key.Format("Stage%dBackImg", i + 1);
-		str.Format("Resources\\Images\\Stage\\Stage%dBackImg.png",i + 1);
+		str.Format("Resources\\Images\\Stage\\BackGround\\Stage%dBackImg.png",i + 1);
 		tempImg->Load(str);
 		m_map.insert(make_pair(Key,tempImg));
 	}
 
 	{
 		CImage* tempImg = new CImage;
-		tempImg->Load("Resources\\Images\\Stage\\BlueObstacle.png");
-		m_map.insert(make_pair("BlueObstacle", tempImg));
+		tempImg->Load("Resources\\Images\\Stage\\Obstacle\\LongBlueObstacle.png");
+		m_map.insert(make_pair("LongBlueObstacle", tempImg));
 	}
 
 	{
 		CImage* tempImg = new CImage;
-		tempImg->Load("Resources\\Images\\Player\\PlayerMove.png");
-		m_map.insert(make_pair("PlayerMove", tempImg));
-
+		tempImg->Load("Resources\\Images\\Stage\\Obstacle\\MidBlueObstacle.png");
+		m_map.insert(make_pair("MidBlueObstacle", tempImg));
 	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Stage\\Obstacle\\ShortBlueObstacle.png");
+		m_map.insert(make_pair("ShortBlueObstacle", tempImg));
+	}
+
 
 	{
 		for (int i = 0; i < NUM_OF_MENU; ++i) {
@@ -50,10 +56,49 @@ void CBitmapManager::Initiallize()
 
 	{
 		CImage* tempImg = new CImage;
-		tempImg->Load("Resources\\Images\\Player\\Attack\\PlayerShootBubbleImg.png");
-		m_map.insert(make_pair("PlayerShootBubbleImg", tempImg));
+		tempImg->Load("Resources\\Images\\Player\\Attack\\BubblePopImg.png");
+		m_map.insert(make_pair("BubblePopImg", tempImg));
 
 
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\Attack\\PlayerShootBubbleToRightImg.png");
+		m_map.insert(make_pair("PlayerShootBubbleToRightImg", tempImg));
+
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\Attack\\PlayerShootBubbleToLeftImg.png");
+		m_map.insert(make_pair("PlayerShootBubbleToLeftImg", tempImg));
+
+	}
+
+
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\MoveAndJump\\PlayerMoveAndJumpToRightImg.png");
+		m_map.insert(make_pair("PlayerMoveAndJumpToRightImg", tempImg));
+	}
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\MoveAndJump\\PlayerMoveAndJumpToLeftImg.png");
+		m_map.insert(make_pair("PlayerMoveAndJumpToLeftImg", tempImg));
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCMoveAndJumpImg.png");
+		m_map.insert(make_pair("Stage1NPCMoveAndJumpImg", tempImg));
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCPopImg.png");
+		m_map.insert(make_pair("Stage1NPCPopImg", tempImg));
 	}
 
 }

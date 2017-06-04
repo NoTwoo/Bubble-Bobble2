@@ -19,6 +19,7 @@ using namespace std;
 #include "CBitmapManager.h"
 #include "CIntro.h"
 #include "CMenu.h"
+#include "CObstacle.h"
 
 #include "CFactory.h"
 #include "CObject.h"

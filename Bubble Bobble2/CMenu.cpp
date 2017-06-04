@@ -5,6 +5,7 @@ void CMenu::Initialize()
 {
 	// Initialize rect of menu
 	m_MenuType = MENUTYPE::NORMAL;
+	SOUNDMANAGER->playsound(SOUNDKIND::MENUBGM);
 
 	for (int i = 0; i < NUM_OF_MENU - 1; ++i) {
 		m_MenuRect[i].left = 55;

@@ -1,11 +1,12 @@
 #pragma once
 #include "CObject.h"
 
-class CPannel : public COject
+class CObstacle: public CObject
 {
 public:
 	virtual void Initiallize();
 	virtual void Update();
 	virtual void Render();
 	virtual void Release();
+	virtual const bool GetDelete() { return false; };
 };

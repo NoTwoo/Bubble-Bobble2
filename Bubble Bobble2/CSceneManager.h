@@ -18,6 +18,8 @@ public:
 	void Render();
 	void Release();
 
+public:
+	std::list<CObject*>& GetStage1List() { return m_Stage1; }
 
 private:
 	CSceneManager();
@@ -30,4 +32,7 @@ private:
 private:
 	CScene* m_Scene;
 	SCENE_ID m_SceneID;
+
+private:
+	std::list<CObject*> m_Stage1;
 };

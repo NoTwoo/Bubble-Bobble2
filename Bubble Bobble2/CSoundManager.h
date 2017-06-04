@@ -8,23 +8,15 @@
 
 enum SOUNDKIND
 {
-	SD_1 = 0,
-	SD_2,
-	SD_3,
-	SD_4,
-	SD_5,
-	SD_END = 7
+	MENUBGM = 0,
+	STAGE1BGM,
+	SD_END
 };
 
 enum EFFSOUNDKIND
 {
-	EFFSD_1 = 0,
-	EFFSD_2,
-	EFFSD_3,
-	EFFSD_4,
-	EFFSD_5,
-	EFFSD_6,
-	EFFSD_7,
+	ATTACK = 0,
+	JUMP,
 	EFFSD_END
 };
 

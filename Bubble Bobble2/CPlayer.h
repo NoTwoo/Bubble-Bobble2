@@ -6,26 +6,33 @@ class CPlayer : public CCharacter
 {
 
 public:
-	void MoveRender();
-	void BubbleRender();
+	virtual void MoveRender();
+	void ShootBubbleRender();
+	virtual void JumpRender();
 
 public:
 	virtual void Initiallize();
 	virtual void Update();
 	virtual void Render();
 	virtual void Release();
+	virtual const bool GetDelete() { return false; };
 
 public:
-	virtual void CheckCollision();
+	virtual const bool CheckCollision(const DIRECTION);
+	void CheckCollision();
+	void CheckPopBubble();
+	void CheckDelete();
 	virtual void Move();
-	virtual void Attack();
+	void Attack();
+	virtual void Jump();
 
 private:
-	BYTE m_AttCnt;
+	BYTE m_AttImgCnt;
 	bool m_IsAttOn;
 
 private:
 	DWORD m_BubbleTimer;
+	WORD m_BubbleImgWidth, m_BubbleImgHeight;
 public:
 	//virtual ~CPlayer();
 };

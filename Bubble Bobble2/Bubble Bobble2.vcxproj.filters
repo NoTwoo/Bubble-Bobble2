@@ -47,9 +47,6 @@
     <Filter Include="Game\GameManager\Object\Item">
       <UniqueIdentifier>{1c233eae-92ca-44dc-bc74-2c64aebddbc2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\GameManager\Object\Pannel">
-      <UniqueIdentifier>{be1d0ba9-b6b1-413f-b0f7-0bfe1c6edf6a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\GameManager\Object\Text">
       <UniqueIdentifier>{d606035f-a78f-46bd-8dd0-1f18faf51ef7}</UniqueIdentifier>
     </Filter>
@@ -71,6 +68,9 @@
     </Filter>
     <Filter Include="Game\GameManager\Object\Bubble">
       <UniqueIdentifier>{84ac89f5-bad7-4ddb-8110-ee1df2fbdfd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameManager\Object\Obstacle">
+      <UniqueIdentifier>{be1d0ba9-b6b1-413f-b0f7-0bfe1c6edf6a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -101,9 +101,6 @@
     <ClCompile Include="CFactory.cpp">
       <Filter>Game\Design Pattern</Filter>
     </ClCompile>
-    <ClCompile Include="CPannel.cpp">
-      <Filter>Game\GameManager\Object\Pannel</Filter>
-    </ClCompile>
     <ClCompile Include="CItem.cpp">
       <Filter>Game\GameManager\Object\Item</Filter>
     </ClCompile>
@@ -127,6 +124,9 @@
     </ClCompile>
     <ClCompile Include="CBubble.cpp">
       <Filter>Game\GameManager\Object\Bubble</Filter>
+    </ClCompile>
+    <ClCompile Include="CObstacle.cpp">
+      <Filter>Game\GameManager\Object\Obstacle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,9 +160,6 @@
     <ClInclude Include="global.h">
       <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="CPannel.h">
-      <Filter>Game\GameManager\Object\Pannel</Filter>
-    </ClInclude>
     <ClInclude Include="CItem.h">
       <Filter>Game\GameManager\Object\Item</Filter>
     </ClInclude>
@@ -192,6 +189,9 @@
     </ClInclude>
     <ClInclude Include="CBubble.h">
       <Filter>Game\GameManager\Object\Bubble</Filter>
+    </ClInclude>
+    <ClInclude Include="CObstacle.h">
+      <Filter>Game\GameManager\Object\Obstacle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

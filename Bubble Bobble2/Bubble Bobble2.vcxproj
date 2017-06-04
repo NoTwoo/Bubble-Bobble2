@@ -160,7 +160,7 @@
     <ClCompile Include="CSoundManager.cpp" />
     <ClCompile Include="CFactory.cpp" />
     <ClCompile Include="CItem.cpp" />
-    <ClCompile Include="CPannel.cpp" />
+    <ClCompile Include="CObstacle.cpp" />
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="CStage1.cpp" />
   </ItemGroup>
@@ -184,7 +184,7 @@
     <ClInclude Include="global.h" />
     <ClInclude Include="CItem.h" />
     <ClInclude Include="macro.h" />
-    <ClInclude Include="CPannel.h" />
+    <ClInclude Include="CObstacle.h" />
     <ClInclude Include="CStage1.h" />
   </ItemGroup>
   <ItemGroup>

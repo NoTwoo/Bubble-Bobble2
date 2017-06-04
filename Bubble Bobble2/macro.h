@@ -7,11 +7,20 @@
 #define NUM_OF_MENU 6
 #define NUM_OF_STAGE 1
 
+#define NUM_OF_PLAYER_MOVE_IMG 8
+#define NUM_OF_PLAYER_JUMP_IMG 8
+#define NUM_OF_PLAYER_MOVE_JUMP_IMG 16
+
 #define PLAYER_MOVE_X_IMG 7
 #define PLAYER_MOVE_Y_IMG 2
 
 #define SPEED 20
 
 #define NUM_OF_PLAYER_BUBBLE_MOVE_IMG 7 
+#define NUM_OF_BUBBLE_POP_IMG 6
 #define NUM_OF_PLAYER_SHOOT_BUBBLE_IMG 4
+
+#define NUM_OF_STAGE1_MONSTER_MOVE_JUMP_IMG 16
+#define NUM_OF_STAGE1_MONSTER_POP_IMG 13
+
 #define SAFE_DELETE(pointer) if(pointer) {delete pointer; pointer = NULL;}

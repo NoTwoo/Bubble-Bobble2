@@ -11,5 +11,10 @@ public:
 	virtual void Release();
 
 public:
+	void ObstacleInitialize();
+	void NPCInitialize();
+
+public:
 	virtual ~CStage1();
+
 };

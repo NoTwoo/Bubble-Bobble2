@@ -13,7 +13,6 @@ void  CGameManager::Initiallize(const HWND& a_hWnd)
 
 	GetClientRect(m_hWnd, &m_Rect);
 	m_Rect.left = 10, m_Rect.right = m_Rect.right - 20, m_Rect.top = 40, m_Rect.bottom = m_Rect.bottom - 25;
-
 	BITMAPMANAGER->Initiallize();
 	SOUNDMANAGER->Initialize();
 	SCENEMANAGER->SetState(INTRO);

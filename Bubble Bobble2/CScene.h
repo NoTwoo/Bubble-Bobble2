@@ -2,6 +2,10 @@
 
 #include "macro.h"
 #include "enum.h"
+#include "CObstacle.h"
+
+#include <list>
+
 
 class CScene
 {
@@ -14,4 +18,5 @@ public:
 public:
 	CScene() = default;
 	virtual ~CScene() = default;
+
 };
