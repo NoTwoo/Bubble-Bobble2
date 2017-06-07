@@ -72,6 +72,15 @@
     <Filter Include="Game\GameManager\Object\Obstacle">
       <UniqueIdentifier>{be1d0ba9-b6b1-413f-b0f7-0bfe1c6edf6a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameManager\Object\Item\Food">
+      <UniqueIdentifier>{a44b48a3-fb62-4680-9d98-d8b612caf699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SceneManager\Scene\Menu\Help">
+      <UniqueIdentifier>{72989ad6-8bf3-4c36-ae3a-fde70465a7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SceneManager\Scene\GameOver">
+      <UniqueIdentifier>{bc82946e-f088-438a-8e05-820ca2895c72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client_main.cpp">
@@ -127,6 +136,15 @@
     </ClCompile>
     <ClCompile Include="CObstacle.cpp">
       <Filter>Game\GameManager\Object\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="CFood.cpp">
+      <Filter>Game\GameManager\Object\Item\Food</Filter>
+    </ClCompile>
+    <ClCompile Include="CHelp.cpp">
+      <Filter>Game\SceneManager\Scene\Menu\Help</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameOver.cpp">
+      <Filter>Game\SceneManager\Scene\GameOver</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +210,15 @@
     </ClInclude>
     <ClInclude Include="CObstacle.h">
       <Filter>Game\GameManager\Object\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="CFood.h">
+      <Filter>Game\GameManager\Object\Item\Food</Filter>
+    </ClInclude>
+    <ClInclude Include="CHelp.h">
+      <Filter>Game\SceneManager\Scene\Menu\Help</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameOver.h">
+      <Filter>Game\SceneManager\Scene\GameOver</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

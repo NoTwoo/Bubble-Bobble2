@@ -41,7 +41,7 @@ SCENE_ID CMenu::Update()
 			case MENUTYPE::GAME_START: return SCENE_ID::STAGE1;
 			case MENUTYPE::REPLAY: return SCENE_ID::NOTHING;
 			case MENUTYPE::RANKING: return SCENE_ID::NOTHING;
-			case MENUTYPE::HELP: return SCENE_ID::NOTHING;
+			case MENUTYPE::HELP: return SCENE_ID::MENU_HELP;
 			case MENUTYPE::MENU_EXIT: return SCENE_ID::GAME_EXIT;
 			}
 	}

@@ -1,4 +1,32 @@
-﻿  CStage1.cpp
+﻿  CBitmapManager.cpp
+  Generating Code...
+  Compiling...
+  client_main.cpp
+  CStage1.cpp
+  CSoundManager.cpp
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\csoundmanager.cpp(25): warning C4101: 'str': unreferenced local variable
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\csoundmanager.cpp(62): warning C4474: 'sprintf_s' : too many arguments passed for format string
+  s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\csoundmanager.cpp(62): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\csoundmanager.cpp(88): warning C4101: 'IsPlaying': unreferenced local variable
+  CSceneManager.cpp
+  CPlayer.cpp
+  CObstacle.cpp
+  CObject.cpp
+  CNPC.cpp
+  CMenu.cpp
+  CItem.cpp
+  CIntro.cpp
+  CHelp.cpp
+  CGameOver.cpp
+  CGameManager.cpp
+  CFood.cpp
+  CFactory.cpp
+  CDBManager.cpp
+  CBubble.cpp
+  Generating Code...
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cbubble.cpp(164): warning C4172: returning address of local variable or temporary
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cbubble.cpp(166): warning C4172: returning address of local variable or temporary
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cmenu.cpp(48): warning C4715: 'CMenu::Update': not all control paths return a value
 CText.obj : warning LNK4099: PDB 'vc141.pdb' was not found with 'CText.obj' or at 'S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\vc141.pdb'; linking object as if no debug info
 CScene.obj : warning LNK4099: PDB 'vc141.pdb' was not found with 'CScene.obj' or at 'S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\vc141.pdb'; linking object as if no debug info
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.exe

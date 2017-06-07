@@ -12,15 +12,20 @@ public:
 	virtual void Move() {};
 	virtual void MoveRender();
 	virtual void Jump() {};
-	virtual void JumpRender() {};
-	virtual const bool CheckCollision(const DIRECTION) { return false; };
+	virtual void JumpRender();
+	virtual const bool CheckCollision(const ACTION) { return false; };
+	virtual void CheckCollision();
+
 public:
-	virtual const bool GetDelete() { return false; }
-public:
-	CNPC(const ObjType a_Type);
+	CNPC(const ObjType a_ObjType);
 
 private:
-	CString m_MoveJumpStr, m_PopStr;
+	CString m_RightMoveJumpStr{}, m_LeftMoveJumpStr{};
+	BYTE m_JumpSpeed;
+	BYTE m_NumOfImg;
+	BYTE m_NumOfMoveImg;
+private:
+	DWORD m_ActionTime{};
 public:
 	//virtual ~CNPC() {};
 };

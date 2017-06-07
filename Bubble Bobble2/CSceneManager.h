@@ -19,8 +19,12 @@ public:
 	void Release();
 
 public:
-	std::list<CObject*>& GetStage1List() { return m_Stage1; }
-
+	void PointRender();
+	void DecreaseNPCNum() { --m_NPC_NUM; }
+	const BYTE& GetNPCNum() { return m_NPC_NUM; }
+public:
+	std::list<CObject*>& GetStageList() { return m_StageList; }
+	const SCENE_ID& GetStage() { return m_SceneID; }
 private:
 	CSceneManager();
 	~CSceneManager();
@@ -34,5 +38,7 @@ private:
 	SCENE_ID m_SceneID;
 
 private:
-	std::list<CObject*> m_Stage1;
+	BYTE m_NPC_NUM;
+private:
+	std::list<CObject*> m_StageList;
 };

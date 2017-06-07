@@ -9,7 +9,7 @@
 #include <windows.h>
 #include <atlstr.h>
 #include <Vfw.h>
-
+#include <time.h>
 using namespace std;
 
 #include "CGameManager.h"
@@ -31,7 +31,10 @@ using namespace std;
 #include "macro.h"
 #include "enum.h"
 #include "CBubble.h"
-
+#include "CItem.h"
+#include "CFood.h"
+#include "CHelp.h"
+#include "CGameOver.h"
 
 ///
 #define GAMEMANAGER CGameManager::GetInstance()

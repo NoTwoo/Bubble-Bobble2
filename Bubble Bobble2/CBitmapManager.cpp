@@ -91,16 +91,53 @@ void CBitmapManager::Initiallize()
 
 	{
 		CImage* tempImg = new CImage;
-		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCMoveAndJumpImg.png");
-		m_map.insert(make_pair("Stage1NPCMoveAndJumpImg", tempImg));
+		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCRightMoveAndJumpImg.png");
+		m_map.insert(make_pair("Stage1NPCRightMoveAndJumpImg", tempImg));
 	}
 
 	{
 		CImage* tempImg = new CImage;
-		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCPopImg.png");
-		m_map.insert(make_pair("Stage1NPCPopImg", tempImg));
+		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCLeftMoveAndJumpImg.png");
+		m_map.insert(make_pair("Stage1NPCLeftMoveAndJumpImg", tempImg));
 	}
 
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Stage\\NPC\\Stage1NPCStuckImg.png");
+		m_map.insert(make_pair("Stage1NPCStuckImg", tempImg));
+	}
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Stage\\Item\\FoodItem1Img.png");
+		m_map.insert(make_pair("FoodItem1Img", tempImg));
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Stage\\Point\\PointImg.png");
+		m_map.insert(make_pair("PointImg", tempImg));
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Player\\Stuck\\PlayerStuckImg.png");
+		m_map.insert(make_pair("PlayerStuckImg", tempImg));
+
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\Menu\\HelpImg.png");
+		m_map.insert(make_pair("HelpImg", tempImg));
+
+	}
+
+	{
+		CImage* tempImg = new CImage;
+		tempImg->Load("Resources\\Images\\GameOver\\GameOverImg.png");
+		m_map.insert(make_pair("GameOverImg", tempImg));
+
+	}
 }
 void CBitmapManager::Update()
 {

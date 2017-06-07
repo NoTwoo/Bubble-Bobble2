@@ -10,7 +10,6 @@ public:
 	virtual void Update() = 0;
 	virtual void Render() = 0;
 	virtual void Release() = 0;
-	virtual const bool GetDelete() = 0;
 
 public:
 	const ObjType& GetObjType() const { return m_ObjType; };
@@ -25,6 +24,9 @@ public:
 	void SetRect(const RECT a_rect) { m_rect = a_rect; };
 
 public:
+	void DeleteMe() { m_DeleteMe = true; }
+	virtual const bool& GetDelete() { return m_DeleteMe; }
+public:
 	//virtual ~CObject() = 0;
 
 protected:
@@ -32,6 +34,7 @@ protected:
 	CString m_name;
 	POINT m_pos;
 	RECT m_rect;
+	bool m_DeleteMe{ false };
 protected:
 	DWORD m_Time;
 };

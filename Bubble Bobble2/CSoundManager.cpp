@@ -41,10 +41,10 @@ void CSoundManager::soundsetup()
 
 void CSoundManager::playsound(SOUNDKIND esound)
 {
-
-	//if (esound > 0) FMOD_Channel_Stop(this->effg_pchannel[esound - 1]);
+	
 	this->BGsoundoff();
 	FMOD_System_PlaySound(this->g_psystem, FMOD_CHANNEL_FREE, this->g_psound[esound], 0, &this->g_pchannel[esound]);
+	
 }
 
 void CSoundManager::effsoundsetup()
@@ -58,12 +58,14 @@ void CSoundManager::effsoundsetup()
 	FMOD_System_Init(this->effg_psystem, EFFSD_END, FMOD_INIT_NORMAL, NULL);
 
 	//사운드 경로
-	/*for (int i = 0; i<EFFSD_END; i++){
+	for (int i = 0; i<EFFSD_END; i++){
 		sprintf_s(str, "Sound\\effsound%d.wav", i + 1, lstrlen(str));
 		FMOD_System_CreateSound(this->effg_psystem, (const char*)str, FMOD_DEFAULT, 0, &this->effg_psound[i]);
-	}*/
+	}
 	FMOD_System_CreateSound(this->effg_psystem, "Resources\\Sound\\Effects\\Attack\\Attack.mp3", FMOD_DEFAULT, 0, &this->effg_psound[EFFSOUNDKIND::ATTACK]);
 	FMOD_System_CreateSound(this->effg_psystem, "Resources\\Sound\\Effects\\Jump\\PlayerJump.wav", FMOD_DEFAULT, 0, &this->effg_psound[EFFSOUNDKIND::JUMP]);
+	FMOD_System_CreateSound(this->effg_psystem, "Resources\\Sound\\Effects\\ItemDrop\\ItemDrop.wav", FMOD_DEFAULT, 0, &this->effg_psound[EFFSOUNDKIND::ITEM_DROP]);
+	FMOD_System_CreateSound(this->effg_psystem, "Resources\\Sound\\Effects\\Stuck\\PlayerStuck.wav", FMOD_DEFAULT, 0, &this->effg_psound[EFFSOUNDKIND::STUCK]);
 }
 /*
 1~7각종 스킬같은 종류 사운드
@@ -82,9 +84,11 @@ void CSoundManager::effsoundoff()
 }
 void CSoundManager::effplaysound(EFFSOUNDKIND esound)
 {
-	FMOD_BOOL IsPlaying;
 	
+	FMOD_BOOL IsPlaying;
+
 	FMOD_System_PlaySound(this->effg_psystem, FMOD_CHANNEL_FREE, this->effg_psound[esound], 0, &this->effg_pchannel[esound]);
+	
 }
 
 

@@ -19,15 +19,22 @@ public:
 	void Render();
 	void Release() {};
 public:
-	///Get
 	const HDC& GetMemDC() { return m_hMemDC; }
 	const HWND& GethWnd() { return m_hWnd; }
 	const RECT& GetRect() { return m_Rect; }
-	CPlayer& GetPlayer() { return m_Player; }
+	CPlayer* GetPlayer() { return m_Player; }
 public:
 	void SethWnd(HWND m_hWnd) { this->m_hWnd = m_hWnd; }
 
 public:
+	void AddPoint(DWORD a_Point) { m_Point += a_Point;  m_PointStr.Format("Score: %d", m_Point); }
+	const CString& GetPoint() { return m_PointStr; }
+public:
+	void InitGameOver() { if (m_IsGameOver) { m_IsGameOver = false; this->Init(); } }
+	void Init() { if (!m_Player) m_Player = new CPlayer; m_Point = 0; m_PointStr.Format("Score: %d", m_Point);}
+	const bool& IsGameOver() { return m_IsGameOver; }
+	void GameOver() { if (!m_IsGameOver) m_IsGameOver = true; }
+	void DeletePlayer() { SAFE_DELETE(m_Player); }
 	void GameExit() { PostQuitMessage(0); }
 private:
 	HDC m_hDC, m_hMemDC;
@@ -42,5 +49,10 @@ private:
 	static CGameManager* m_instance;
 
 private:
-	CPlayer m_Player;
+	CPlayer* m_Player;
+	DWORD m_Point{};
+	CString m_PointStr;
+
+private:
+	bool m_IsGameOver{ false };
 };
