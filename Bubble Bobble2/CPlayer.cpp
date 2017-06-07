@@ -34,24 +34,27 @@ void CPlayer::CheckPopBubble()
 					CBubble* pBubble = dynamic_cast<CBubble*>(d);
 					pBubble->SetPop();
 					while (itor != m_Obj.end()) {
-						list<CObject*>::iterator itor2 = m_Obj.begin();
-						while (itor2 != m_Obj.end()) {
-							if (itor != itor2) {
+						if (IntersectRect(&tempRect, &d->GetRect(), &(*itor)->GetRect())) {
+							CBubble* pBubble = dynamic_cast<CBubble*>(*itor);
+							pBubble->SetPop();
+							list<CObject*>::iterator itor2 = m_Obj.begin();
+							while (itor2 != m_Obj.end()) {
 								if (IntersectRect(&tempRect, &(*itor)->GetRect(), &(*itor2)->GetRect())) {
-									CBubble* pBubble2 = dynamic_cast<CBubble*>(*itor2);
-									pBubble2->SetPop();
+									CBubble* pBubble = dynamic_cast<CBubble*>(*itor2);
+									pBubble->SetPop();
 								}
+								++itor2;
 							}
-							++itor2;
 						}
 						++itor;
 					}
-					return;
+					
 				}
 
 			}
 		}
 	}
+	
 
 }
 void CPlayer::CheckCollision()
