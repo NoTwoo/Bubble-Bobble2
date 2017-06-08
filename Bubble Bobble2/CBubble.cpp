@@ -29,12 +29,27 @@ void CBubble::CheckCollision()
 		m_rect.top = m_pos.y;
 		m_rect.bottom = (m_rect.top + m_StuckImgHeight);
 	}
+
+	else {
+		m_rect.left = m_pos.x;
+		m_rect.right = (m_rect.left + m_BubbleImgWidth);
+		m_rect.top = m_pos.y;
+		m_rect.bottom = (m_rect.top + m_BubbleImgHeight);
+	}
 	RECT BubbleTempRect = m_rect;
-	BubbleTempRect.top -= 10;
+	//BubbleTempRect.top -= 10;
 	for (auto d : SCENEMANAGER->GetStageList()) {
 
 		if (IntersectRect(&tempRect, &BubbleTempRect, &d->GetRect())) {
-			m_Flow = false;
+			if (m_Flow) {
+				if (d->GetObjType() == OBSTACLE || d->GetObjType() == REAR_OBSTACLE) {
+					::SetRect(&tempRect, 0, 0, tempRect.right - tempRect.left, tempRect.bottom - tempRect.top);
+					if (tempRect.right >= tempRect.bottom) {
+						if (m_pos.y >= d->GetPos().y) m_Flow = false;
+					}
+				}
+
+			}
 			if (m_Catch) {
 				if (d->GetObjType() != NPC) {
 					::SetRect(&tempRect, 0, 0, tempRect.right - tempRect.left, tempRect.bottom - tempRect.top);
@@ -63,7 +78,7 @@ void CBubble::CheckCollision()
 					}
 				}
 			}
-			if (d->GetObjType() == NPC && m_OldPos.y == m_pos.y) {
+			if (d->GetObjType() == NPC && m_OldPos.y == m_pos.y && m_Flow) {
 				CNPC* pNPC = reinterpret_cast<CNPC*>(d);
 				if (!m_Catch && pNPC->GetPos().y == pNPC->GetPos().y) {
 					m_Catch = true;
@@ -95,14 +110,8 @@ void CBubble::Update()
 				}
 			}
 			else {
-
 				if (m_Flow) m_pos.y -= SPEED;
 			}
-			
-			m_rect.left = m_pos.x;
-			m_rect.right = m_rect.left + m_BubbleImgWidth;
-			m_rect.top = m_pos.y;
-			m_rect.bottom = m_rect.top + m_BubbleImgHeight;
 		}
 		if(m_Pop) ++m_PopImgCnt;
 

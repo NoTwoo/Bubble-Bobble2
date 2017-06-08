@@ -181,7 +181,7 @@ void CPlayer::Attack()
 						(m_pos.x + m_ImgWidth) + m_BubbleImgWidth, (m_pos.y + 10) + m_BubbleImgHeight }));
 				else
 					m_Obj.push_back(m_fact.CreateObj( m_Action,
-						RECT{ m_pos.x - m_ImgWidth, m_pos.y - 10,
+						RECT{ m_pos.x - m_ImgWidth, m_pos.y + 10,
 						(m_pos.x - m_ImgWidth) + m_BubbleImgWidth, (m_pos.y - 10) + m_BubbleImgHeight }));
 
 			}

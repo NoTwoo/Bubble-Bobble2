@@ -56,8 +56,8 @@ void CStage1::NPCInitialize()
 {
 	CFactory<CNPC> Fact;
 
-	//for(int i=0; i < NUM_OF_STAGE1_MONSTER_NUM; ++i)
-	//SCENEMANAGER->GetStageList().push_back(Fact.CreateObj(NPC, POINT{ NPC_START_X, NPC_START_Y }));
+	for(int i=0; i < NUM_OF_STAGE1_MONSTER_NUM; ++i)
+	SCENEMANAGER->GetStageList().push_back(Fact.CreateObj(NPC, POINT{ NPC_START_X, NPC_START_Y }));
 }
 
 void CStage1::Initialize()
