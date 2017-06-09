@@ -6,7 +6,8 @@ CNPC::CNPC(const ObjType a_ObjType)
 	switch (SCENEMANAGER->GetStage()) {
 	case STAGE1: m_name = "Stage1"; m_NumOfImg = NUM_OF_STAGE1_MONSTER_MOVE_JUMP_IMG;
 		m_NumOfMoveImg = NUM_OF_STAGE1_MONSTER_MOVE_IMG; break;
-
+	case STAGE2: m_name = "Stage1"; m_NumOfImg = NUM_OF_STAGE1_MONSTER_MOVE_JUMP_IMG;
+		m_NumOfMoveImg = NUM_OF_STAGE1_MONSTER_MOVE_IMG; break;
 	}
 
 }

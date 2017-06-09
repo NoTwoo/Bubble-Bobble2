@@ -15,6 +15,14 @@ public:
 		return m_instance;
 	}
 public:
+	void LoadMenuImg();
+	void LoadBackImg();
+	void LoadBubbleImg();
+	void LoadPlayerImg();
+	void LoadNPCImg();
+	void LoadItemImg();
+	void LoadEffectImg();
+public:
 	void Initiallize();
 	void Update();
 	void Render();

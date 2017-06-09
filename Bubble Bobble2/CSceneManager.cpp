@@ -16,6 +16,8 @@ void  CSceneManager::SetState(const SCENE_ID& a_SceneId)
 		 m_Scene = new CMenu; m_SceneID = SCENE_ID::MENU; GAMEMANAGER->InitGameOver(); GAMEMANAGER->Init(); break;
 	case SCENE_ID::STAGE1:
 		m_Scene = new CStage1; m_SceneID = SCENE_ID::STAGE1;  m_NPC_NUM = NUM_OF_STAGE1_MONSTER_NUM; break;
+	case SCENE_ID::STAGE2:
+		m_Scene = new CStage2; m_SceneID = SCENE_ID::STAGE2;  m_NPC_NUM = NUM_OF_STAGE2_MONSTER_NUM; break;
 	case SCENE_ID::MENU_HELP:
 		m_Scene = new CHelp; m_SceneID = SCENE_ID::MENU_HELP; break;
 	case SCENE_ID::GAME_OVER:

@@ -167,6 +167,7 @@
     <ClCompile Include="CFactory.cpp" />
     <ClCompile Include="CItem.cpp" />
     <ClCompile Include="CObstacle.cpp" />
+    <ClCompile Include="CStage2.cpp" />
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="CStage1.cpp" />
   </ItemGroup>
@@ -188,6 +189,7 @@
     <ClInclude Include="CSceneManager.h" />
     <ClInclude Include="CSoundManager.h" />
     <ClInclude Include="CFactory.h" />
+    <ClInclude Include="CStage2.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="global.h" />

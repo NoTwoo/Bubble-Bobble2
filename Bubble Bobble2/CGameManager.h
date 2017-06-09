@@ -31,7 +31,7 @@ public:
 	const CString& GetPoint() { return m_PointStr; }
 public:
 	void InitGameOver() { if (m_IsGameOver) { m_IsGameOver = false; this->Init(); } }
-	void Init() { if (!m_Player) m_Player = new CPlayer; m_Point = 0; m_PointStr.Format("Score: %d", m_Point);}
+	void Init() { if (!m_Player) m_Player = new CPlayer; if(m_IsGameOver) m_Point = 0; m_PointStr.Format("Score: %d", m_Point);}
 	const bool& IsGameOver() { return m_IsGameOver; }
 	void GameOver() { if (!m_IsGameOver) m_IsGameOver = true; }
 	void DeletePlayer() { SAFE_DELETE(m_Player); }

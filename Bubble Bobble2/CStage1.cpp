@@ -91,7 +91,8 @@ SCENE_ID CStage1::Update()
 	if (SCENEMANAGER->GetNPCNum() == 0) {
 		GAMEMANAGER->DeletePlayer();
 		SCENEMANAGER->GetStageList().clear();
-		return MENU;
+		GAMEMANAGER->InitGameOver(); GAMEMANAGER->Init();
+		return STAGE2;
 	}
 
 	GAMEMANAGER->GetPlayer()->Update();
