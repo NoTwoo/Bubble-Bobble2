@@ -52,11 +52,13 @@ void CStage1::ObstacleInitialize()
 
 }
 
+
+
 void CStage1::NPCInitialize()
 {
 	CFactory<CNPC> Fact;
 
-	for(int i=0; i < NUM_OF_STAGE1_MONSTER_NUM; ++i)
+	for(int i=0; i < NUM_OF_STAGE2_MONSTER_NUM; ++i)
 	SCENEMANAGER->GetStageList().push_back(Fact.CreateObj(NPC, POINT{ NPC_START_X, NPC_START_Y }));
 }
 
@@ -104,8 +106,11 @@ SCENE_ID CStage1::Update()
 void CStage1::Render()
 {
 	BITMAPMANAGER->GetImage()["Stage1BackImg"]->BitBlt(GAMEMANAGER->GetMemDC(), 0, 0, WINDOWS_WIDTH, WINDOWS_HEIGHT, 0, 0, SRCCOPY);
+	
 	SCENEMANAGER->PointRender();
+
 	for (auto d : SCENEMANAGER->GetStageList()) d->Render();
+
 	GAMEMANAGER->GetPlayer()->Render();
 	GAMEMANAGER->Render();
 }

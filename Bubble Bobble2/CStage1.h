@@ -10,6 +10,7 @@ public:
 	virtual void Render();
 	virtual void Release();
 	virtual void CheckDelete();
+
 public:
 	void ObstacleInitialize();
 	void NPCInitialize();

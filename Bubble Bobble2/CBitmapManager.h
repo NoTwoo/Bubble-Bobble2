@@ -2,7 +2,7 @@
 
 #include <atlimage.h>
 #include <map>
-#include<string>
+#include <string>
 #include <atlstr.h>
 class CBitmapManager
 {

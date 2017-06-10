@@ -31,7 +31,12 @@ void CSoundManager::soundsetup()
 
 
 	FMOD_System_CreateStream(this->g_psystem, "Resources\\Sound\\BGM\\Menu.mp3", FMOD_LOOP_NORMAL, 0, &this->g_psound[MENUBGM]);
-	FMOD_System_CreateStream(this->g_psystem, "Resources\\Sound\\BGM\\Stage1.mp3", FMOD_LOOP_NORMAL, 0, &this->g_psound[STAGE1BGM]);
+
+	CString name;
+	for (int i = 0; i < NUM_OF_STAGE; ++i) {
+		name.Format("Resources\\Sound\\BGM\\Stage%d.mp3", i + 1);
+		FMOD_System_CreateStream(this->g_psystem, name, FMOD_LOOP_NORMAL, 0, &this->g_psound[i + 1]);
+	}
 }
 
 /*
