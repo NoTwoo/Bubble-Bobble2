@@ -5,9 +5,19 @@ CNPC::CNPC(const ObjType a_ObjType)
 	m_ObjType = a_ObjType;
 	switch (SCENEMANAGER->GetStage()) {
 	case STAGE1: m_name = "Stage1"; m_NumOfImg = NUM_OF_STAGE1_MONSTER_MOVE_JUMP_IMG;
-		m_NumOfMoveImg = NUM_OF_STAGE1_MONSTER_MOVE_IMG; break;
+		m_NumOfMoveImg = NUM_OF_STAGE1_MONSTER_MOVE_IMG;
+		m_StartJumpImg = END_OF_STAGE1_JUMP_IMG;
+		m_StartLeftJumpImg = START_OF_STAGE1_LEFT_JUMP_IMG;
+		m_EndRightJumpImg = END_OF_STAGE1_RIGHT_JUMP_IMG;
+		break;
 	case STAGE2: m_name = "Stage1"; m_NumOfImg = NUM_OF_STAGE1_MONSTER_MOVE_JUMP_IMG;
 		m_NumOfMoveImg = NUM_OF_STAGE1_MONSTER_MOVE_IMG; break;
+	case STAGE5: m_name = "Stage5"; m_NumOfImg = NUM_OF_STAGE5_MONSTER_MOVE_JUMP_IMG;
+		m_NumOfMoveImg = NUM_OF_STAGE5_MONSTER_MOVE_IMG;
+		m_StartJumpImg = END_OF_STAGE5_JUMP_IMG;
+		m_StartLeftJumpImg = START_OF_STAGE5_LEFT_JUMP_IMG;
+		m_EndRightJumpImg = END_OF_STAGE5_RIGHT_JUMP_IMG;
+		break;
 
 	}
 
@@ -30,7 +40,16 @@ void CNPC::Initiallize()
 	m_ActionTime = GetTickCount();
 	m_Time = GetTickCount();
 	m_Speed = NPC_SPEED;
-	m_JumpSpeed = NPC_JUMP_SPEED;
+	switch (SCENEMANAGER->GetStage()) {
+	case STAGE1:
+		m_JumpXSpeed = NPC_SPEED;
+		m_JumpSpeed = NPC_JUMP_SPEED;
+		break;
+	case STAGE5:
+		m_JumpXSpeed = NPC_SPEED * 2;
+		m_JumpSpeed = NPC_JUMP_SPEED * 2;
+		break;
+	}
 }
 
 void CNPC::CheckCollision()
@@ -98,9 +117,9 @@ void CNPC::Update()
 			m_MoveImgCnt = m_NumOfImg - 1; break;
 		case ACTION::MOVE_RIGHT:
 			m_Action = ACTION::MOVE_RIGHT; if (m_IsJumpOn) m_IsJumpOn = false; m_MoveImgCnt = 0; break;
-		case ACTION::JUMP_LEFT: m_Action = ACTION::JUMP_LEFT; m_JumpImgCnt = 11; break;
+		case ACTION::JUMP_LEFT: m_Action = ACTION::JUMP_LEFT; m_JumpImgCnt = m_StartLeftJumpImg; break;
 		case ACTION::JUMP_RIGHT:
-			m_Action = ACTION::JUMP_RIGHT; m_JumpImgCnt = m_NumOfMoveImg; break;
+			m_Action = ACTION::JUMP_RIGHT; m_JumpImgCnt = m_NumOfMoveImg - 1; break;
 		}
 		m_ActionTime = GetTickCount();
 	}
@@ -114,14 +133,18 @@ void CNPC::Update()
 			break;
 		case ACTION::JUMP_LEFT: 
 			if (!m_IsJumpOn) {
+				if (m_JumpImgCnt == 0) {
+					m_Action = ACTION::MOVE_LEFT; if (m_IsJumpOn) m_IsJumpOn = false;
+					m_MoveImgCnt = m_NumOfImg - 1; break;
+				}
 				m_IsJumpOn = true;
 				m_JumpTimer = GetTickCount();
 			}
 			else {
 				if (m_JumpTimer + 100 < GetTickCount()) {
-					if (m_JumpImgCnt == m_NumOfMoveImg) { m_IsJumpOn = false;  m_pos.y += m_JumpSpeed; break; }
+					if (m_JumpImgCnt == m_NumOfMoveImg || m_JumpImgCnt == 0) { m_IsJumpOn = false;  m_pos.y += m_JumpSpeed; break; }
 					--m_JumpImgCnt;
-					if (m_JumpImgCnt > m_NumOfMoveImg) { m_pos.x -= m_Speed; m_pos.y -= m_JumpSpeed; }
+					if (m_JumpImgCnt > m_NumOfMoveImg || m_JumpImgCnt > 0) { m_pos.x -= m_JumpXSpeed; m_pos.y -= m_JumpSpeed; }
 					else { m_pos.y += m_JumpSpeed; }
 					m_JumpTimer = GetTickCount();
 				}
@@ -129,15 +152,18 @@ void CNPC::Update()
 			}break;
 		case ACTION::JUMP_RIGHT:
 			if (!m_IsJumpOn) {
+				if (m_JumpImgCnt == m_StartJumpImg) {
+					m_Action = ACTION::MOVE_RIGHT; if (m_IsJumpOn) m_IsJumpOn = false; m_MoveImgCnt = 0; break;
+				}
 				m_IsJumpOn = true;
 				m_JumpTimer = GetTickCount();
 			}
 			else {
 				if (m_JumpTimer + 100 < GetTickCount()) {
-					if (m_JumpImgCnt == 11) { m_IsJumpOn = false;  m_pos.y += m_JumpSpeed; break; }
+					if (m_JumpImgCnt == m_StartJumpImg) { m_IsJumpOn = false;  m_pos.y += m_JumpSpeed; break; }
 					++m_JumpImgCnt;
-					if (m_JumpImgCnt <= 8) { m_pos.x += m_Speed; m_pos.y -= m_JumpSpeed; }
-					else{ m_pos.y += m_JumpSpeed; }
+					if (m_JumpImgCnt <= m_EndRightJumpImg) { m_pos.x += m_JumpXSpeed; m_pos.y -= m_JumpSpeed; }
+					else {m_pos.y += m_JumpSpeed; }
 					m_JumpTimer = GetTickCount();
 				}
 
@@ -199,6 +225,7 @@ void CNPC::JumpRender()
 
 void CNPC::Render()
 {
+	// Rectangle(GAMEMANAGER->GetMemDC(), m_rect.left, m_rect.top, m_rect.right, m_rect.bottom);
 	this->MoveRender();
 	this->JumpRender();
 

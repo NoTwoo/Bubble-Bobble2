@@ -21,9 +21,13 @@ public:
 
 private:
 	CString m_RightMoveJumpStr{}, m_LeftMoveJumpStr{};
+	BYTE m_JumpXSpeed;
 	BYTE m_JumpSpeed;
 	BYTE m_NumOfImg;
 	BYTE m_NumOfMoveImg;
+	BYTE m_StartJumpImg;
+	BYTE m_StartLeftJumpImg;
+	BYTE m_EndRightJumpImg;
 private:
 	DWORD m_ActionTime{};
 public:

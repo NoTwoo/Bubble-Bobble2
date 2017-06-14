@@ -38,7 +38,7 @@ SCENE_ID CMenu::Update()
 		if (GetAsyncKeyState(VK_LBUTTON)) {
 			switch (m_MenuType) {
 			case MENUTYPE::NORMAL: return SCENE_ID::NOTHING;
-			case MENUTYPE::GAME_START: return SCENE_ID::STAGE2;
+			case MENUTYPE::GAME_START: return SCENE_ID::STAGE5;
 			case MENUTYPE::REPLAY: return SCENE_ID::NOTHING;
 			case MENUTYPE::RANKING: return SCENE_ID::NOTHING;
 			case MENUTYPE::HELP: return SCENE_ID::MENU_HELP;

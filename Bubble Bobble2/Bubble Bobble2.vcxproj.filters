@@ -149,6 +149,9 @@
     <ClCompile Include="CStage2.cpp">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
     </ClCompile>
+    <ClCompile Include="CStage5.cpp">
+      <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGameManager.h">
@@ -224,6 +227,9 @@
       <Filter>Game\SceneManager\Scene\GameOver</Filter>
     </ClInclude>
     <ClInclude Include="CStage2.h">
+      <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="CStage5.h">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
     </ClInclude>
   </ItemGroup>

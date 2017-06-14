@@ -9,6 +9,7 @@ void CFood::CheckCollision()
 	m_rect.right = (m_rect.left + BITMAPMANAGER->GetImage()[m_name]->GetWidth());
 	m_rect.top = m_pos.y;
 	m_rect.bottom = (m_rect.top + BITMAPMANAGER->GetImage()[m_name]->GetHeight());
+
 	for (auto d : SCENEMANAGER->GetStageList()) {
 		if (IntersectRect(&tempRect, &m_rect, &d->GetRect())) {
 			::SetRect(&tempRect, 0, 0, tempRect.right - tempRect.left, tempRect.bottom - tempRect.top);

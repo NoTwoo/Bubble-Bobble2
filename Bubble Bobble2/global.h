@@ -29,6 +29,7 @@ using namespace std;
 #include "CScene.h"
 #include "CStage1.h"
 #include "CStage2.h"
+#include "CStage5.h"
 #include "macro.h"
 #include "enum.h"
 #include "CBubble.h"
