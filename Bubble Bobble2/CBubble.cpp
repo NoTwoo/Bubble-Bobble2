@@ -17,6 +17,9 @@ void CBubble::Initiallize()
 
 	switch (SCENEMANAGER->GetStage()) {
 	case STAGE1: m_StuckStr = "Stage1NPCStuckImg"; break;
+	case STAGE2: m_StuckStr = "Stage2NPCStuckImg"; break;
+	case STAGE3: m_StuckStr = "Stage3NPCStuckImg"; break;
+	case STAGE4: m_StuckStr = "Stage4NPCStuckImg"; break;
 	case STAGE5: m_StuckStr = "Stage5NPCStuckImg"; break;
 	}
 }
@@ -168,10 +171,24 @@ const bool& CBubble::GetDelete()
 	if (m_PopImgCnt > NUM_OF_BUBBLE_POP_IMG) {
 		if (m_Catch) {
 			CFactory<CFood> fact;
-			if(SCENEMANAGER->GetStage() == STAGE1)
-			SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, BANANA, "FoodItem1Img", m_rect));
-			if (SCENEMANAGER->GetStage() == STAGE5)
-			SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, ICE_DESSERT, "FoodItem5Img", m_rect));
+			switch (SCENEMANAGER->GetStage()) {
+			case STAGE1:
+				SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, BANANA, "FoodItem1Img", m_rect));
+				break;
+			case STAGE2:
+				SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, SKULL, "FoodItem2Img", m_rect));
+				break;
+			case STAGE3:
+				SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, GEM, "FoodItem3Img", m_rect));
+				break;
+			case STAGE4:
+				SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, CAKE, "FoodItem4Img", m_rect));
+				break;
+			case STAGE5:
+				SCENEMANAGER->GetStageList().push_back(fact.CreateObj(ITEM, CROSS, "FoodItem5Img", m_rect));
+				break;
+
+			}
 			SCENEMANAGER->DecreaseNPCNum();
 		}
 		return true;

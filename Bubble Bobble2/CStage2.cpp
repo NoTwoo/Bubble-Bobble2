@@ -125,7 +125,7 @@ SCENE_ID CStage2::Update()
 	return NOTHING;
 }
 
-void CStage2::Render()
+void CStage2::Render()	
 {
 	BITMAPMANAGER->GetImage()["Stage2BackImg"]->BitBlt(GAMEMANAGER->GetMemDC(), 0, 0, WINDOWS_WIDTH, WINDOWS_HEIGHT, 0, 0, SRCCOPY);
 

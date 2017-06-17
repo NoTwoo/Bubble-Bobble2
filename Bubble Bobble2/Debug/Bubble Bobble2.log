@@ -1,3 +1,5 @@
-﻿  CFood.cpp
+﻿  CBubble.cpp
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cbubble.cpp(194): warning C4172: returning address of local variable or temporary
+s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cbubble.cpp(196): warning C4172: returning address of local variable or temporary
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.exe
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Debug\Bubble Bobble2.pdb (Partial PDB)

@@ -10,15 +10,30 @@ CNPC::CNPC(const ObjType a_ObjType)
 		m_StartLeftJumpImg = START_OF_STAGE1_LEFT_JUMP_IMG;
 		m_EndRightJumpImg = END_OF_STAGE1_RIGHT_JUMP_IMG;
 		break;
-	case STAGE2: m_name = "Stage1"; m_NumOfImg = NUM_OF_STAGE1_MONSTER_MOVE_JUMP_IMG;
-		m_NumOfMoveImg = NUM_OF_STAGE1_MONSTER_MOVE_IMG; break;
+	case STAGE2: m_name = "Stage2"; m_NumOfImg = NUM_OF_STAGE2_MONSTER_MOVE_JUMP_IMG;
+		m_NumOfMoveImg = NUM_OF_STAGE2_MONSTER_MOVE_IMG; 
+		m_StartJumpImg = END_OF_STAGE2_JUMP_IMG;
+		m_StartLeftJumpImg = START_OF_STAGE2_LEFT_JUMP_IMG;
+		m_EndRightJumpImg = END_OF_STAGE2_RIGHT_JUMP_IMG;
+		break;
+	case STAGE3: m_name = "Stage3"; m_NumOfImg = NUM_OF_STAGE3_MONSTER_MOVE_JUMP_IMG;
+		m_NumOfMoveImg = NUM_OF_STAGE3_MONSTER_MOVE_IMG;
+		m_StartJumpImg = END_OF_STAGE3_JUMP_IMG;
+		m_StartLeftJumpImg = START_OF_STAGE3_LEFT_JUMP_IMG;
+		m_EndRightJumpImg = END_OF_STAGE3_RIGHT_JUMP_IMG;
+		break;
+	case STAGE4: m_name = "Stage4"; m_NumOfImg = NUM_OF_STAGE4_MONSTER_MOVE_JUMP_IMG;
+		m_NumOfMoveImg = NUM_OF_STAGE4_MONSTER_MOVE_IMG;
+		m_StartJumpImg = END_OF_STAGE4_JUMP_IMG;
+		m_StartLeftJumpImg = START_OF_STAGE4_LEFT_JUMP_IMG;
+		m_EndRightJumpImg = END_OF_STAGE4_RIGHT_JUMP_IMG;
+		break;
 	case STAGE5: m_name = "Stage5"; m_NumOfImg = NUM_OF_STAGE5_MONSTER_MOVE_JUMP_IMG;
 		m_NumOfMoveImg = NUM_OF_STAGE5_MONSTER_MOVE_IMG;
 		m_StartJumpImg = END_OF_STAGE5_JUMP_IMG;
 		m_StartLeftJumpImg = START_OF_STAGE5_LEFT_JUMP_IMG;
 		m_EndRightJumpImg = END_OF_STAGE5_RIGHT_JUMP_IMG;
 		break;
-
 	}
 
 }
@@ -44,6 +59,18 @@ void CNPC::Initiallize()
 	case STAGE1:
 		m_JumpXSpeed = NPC_SPEED;
 		m_JumpSpeed = NPC_JUMP_SPEED;
+		break;
+	case STAGE2:
+		m_JumpXSpeed = NPC_SPEED * 2;
+		m_JumpSpeed = NPC_JUMP_SPEED * 2;
+		break;
+	case STAGE3:
+		m_JumpXSpeed = NPC_SPEED * 2;
+		m_JumpSpeed = NPC_JUMP_SPEED * 2;
+		break;
+	case STAGE4:
+		m_JumpXSpeed = NPC_SPEED * 2;
+		m_JumpSpeed = NPC_JUMP_SPEED * 2;
 		break;
 	case STAGE5:
 		m_JumpXSpeed = NPC_SPEED * 2;

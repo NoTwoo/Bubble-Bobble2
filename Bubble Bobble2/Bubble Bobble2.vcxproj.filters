@@ -152,6 +152,12 @@
     <ClCompile Include="CStage5.cpp">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
     </ClCompile>
+    <ClCompile Include="CStage3.cpp">
+      <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="CStage4.cpp">
+      <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGameManager.h">
@@ -230,6 +236,12 @@
       <Filter>Game\SceneManager\Scene\Stage</Filter>
     </ClInclude>
     <ClInclude Include="CStage5.h">
+      <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="CStage3.h">
+      <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="CStage4.h">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
     </ClInclude>
   </ItemGroup>

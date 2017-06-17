@@ -168,6 +168,8 @@
     <ClCompile Include="CItem.cpp" />
     <ClCompile Include="CObstacle.cpp" />
     <ClCompile Include="CStage2.cpp" />
+    <ClCompile Include="CStage3.cpp" />
+    <ClCompile Include="CStage4.cpp" />
     <ClCompile Include="CStage5.cpp" />
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="CStage1.cpp" />
@@ -191,6 +193,8 @@
     <ClInclude Include="CSoundManager.h" />
     <ClInclude Include="CFactory.h" />
     <ClInclude Include="CStage2.h" />
+    <ClInclude Include="CStage3.h" />
+    <ClInclude Include="CStage4.h" />
     <ClInclude Include="CStage5.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="enum.h" />

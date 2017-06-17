@@ -18,6 +18,10 @@ void  CSceneManager::SetState(const SCENE_ID& a_SceneId)
 		m_Scene = new CStage1; m_SceneID = SCENE_ID::STAGE1;  m_NPC_NUM = NUM_OF_STAGE1_MONSTER_NUM; break;
 	case SCENE_ID::STAGE2:
 		m_Scene = new CStage2; m_SceneID = SCENE_ID::STAGE2;  m_NPC_NUM = NUM_OF_STAGE2_MONSTER_NUM; break;
+	case SCENE_ID::STAGE3:
+		m_Scene = new CStage3; m_SceneID = SCENE_ID::STAGE3;  m_NPC_NUM = NUM_OF_STAGE3_MONSTER_NUM; break;
+	case SCENE_ID::STAGE4:
+		m_Scene = new CStage4; m_SceneID = SCENE_ID::STAGE4;  m_NPC_NUM = NUM_OF_STAGE4_MONSTER_NUM; break;
 	case SCENE_ID::STAGE5:
 		m_Scene = new CStage5; m_SceneID = SCENE_ID::STAGE5;  m_NPC_NUM = NUM_OF_STAGE5_MONSTER_NUM; break;
 	case SCENE_ID::MENU_HELP:
