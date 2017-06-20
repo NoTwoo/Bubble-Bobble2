@@ -150,6 +150,7 @@
   <ItemGroup>
     <ClCompile Include="CBitmapManager.cpp" />
     <ClCompile Include="CBubble.cpp" />
+    <ClCompile Include="CEnding.cpp" />
     <ClCompile Include="CFood.cpp" />
     <ClCompile Include="CGameManager.cpp" />
     <ClCompile Include="CGameOver.cpp" />
@@ -171,13 +172,13 @@
     <ClCompile Include="CStage3.cpp" />
     <ClCompile Include="CStage4.cpp" />
     <ClCompile Include="CStage5.cpp" />
-    <ClCompile Include="CText.cpp" />
     <ClCompile Include="CStage1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBitmapManager.h" />
     <ClInclude Include="CBubble.h" />
     <ClInclude Include="CCharacter.h" />
+    <ClInclude Include="CEnding.h" />
     <ClInclude Include="CFood.h" />
     <ClInclude Include="CGameManager.h" />
     <ClInclude Include="CDBManager.h" />
@@ -196,7 +197,6 @@
     <ClInclude Include="CStage3.h" />
     <ClInclude Include="CStage4.h" />
     <ClInclude Include="CStage5.h" />
-    <ClInclude Include="CText.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="CItem.h" />

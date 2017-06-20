@@ -111,7 +111,7 @@ SCENE_ID CStage4::Update()
 		return GAME_OVER;
 	}
 
-	if (SCENEMANAGER->GetNPCNum() == 0) {
+	if (SCENEMANAGER->GetNPCNum() == 0 || (GetAsyncKeyState(VK_LCONTROL) & 0x0001)) {
 		GAMEMANAGER->DeletePlayer();
 		SCENEMANAGER->GetStageList().clear();
 		GAMEMANAGER->InitGameOver(); GAMEMANAGER->Init();

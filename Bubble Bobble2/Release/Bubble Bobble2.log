@@ -1,34 +1,36 @@
 ﻿  CBitmapManager.cpp
   CBubble.cpp
+  CDBManager.cpp
+  CEnding.cpp
+  CFactory.cpp
   CFood.cpp
   CGameManager.cpp
   CGameOver.cpp
   CHelp.cpp
-  client_main.cpp
-  CDBManager.cpp
   CIntro.cpp
+  CItem.cpp
   CMenu.cpp
   CNPC.cpp
-  CPlayer.cpp
-  CScene.cpp
   CObject.cpp
+  CObstacle.cpp
+  CPlayer.cpp
   CSceneManager.cpp
   CSoundManager.cpp
 CSoundManager.cpp(25): warning C4101: 'str': unreferenced local variable
-CSoundManager.cpp(62): warning C4474: 'sprintf_s' : too many arguments passed for format string
-  CSoundManager.cpp(62): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
-CSoundManager.cpp(88): warning C4101: 'IsPlaying': unreferenced local variable
-  CFactory.cpp
-  CItem.cpp
-  CObstacle.cpp
-  CText.cpp
-  Compiling...
+CSoundManager.cpp(67): warning C4474: 'sprintf_s' : too many arguments passed for format string
+  CSoundManager.cpp(67): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+CSoundManager.cpp(93): warning C4101: 'IsPlaying': unreferenced local variable
   CStage1.cpp
+  CStage2.cpp
+  Compiling...
+  CStage3.cpp
+  CStage4.cpp
+  CStage5.cpp
+  client_main.cpp
   Generating code
-s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cmenu.cpp(48): warning C4715: 'CMenu::Update': not all control paths return a value
-s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cbubble.cpp(164): warning C4172: returning address of local variable or temporary
-s:\kpu\4-1\apiproject\bubble bobble2\bubble bobble2\cbubble.cpp(166): warning C4172: returning address of local variable or temporary
-  All 746 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 797 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Release\Bubble Bobble2.exe
   Bubble Bobble2.vcxproj -> S:\KPU\4-1\APIProject\Bubble Bobble2\Release\Bubble Bobble2.pdb (Full PDB)

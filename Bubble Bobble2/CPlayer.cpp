@@ -243,7 +243,6 @@ void CPlayer::Jump()
 
 void CPlayer::Update()
 {
-
 	if (m_IsStuck && m_StuckTimer + PLAYER_STUCK_TIME < GetTickCount()) m_Pop = true;
 	
 	if (m_rect.right < END_OF_LEFT || m_rect.left > END_OF_RIGHT || m_rect.bottom < START_OF_TOP) {

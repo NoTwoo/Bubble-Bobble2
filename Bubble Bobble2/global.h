@@ -1,10 +1,8 @@
 #pragma once
 
-#include <stdio.h>
 #include <iostream>
 #include <map>
 #include <atlimage.h>
-#include <algorithm>
 #include <iterator>
 #include <windows.h>
 #include <atlstr.h>
@@ -18,6 +16,7 @@ using namespace std;
 #include "CDBManager.h"
 #include "CBitmapManager.h"
 #include "CIntro.h"
+#include "CEnding.h"
 #include "CMenu.h"
 #include "CObstacle.h"
 

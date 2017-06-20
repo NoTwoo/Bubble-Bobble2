@@ -11,7 +11,7 @@ public:
 	virtual void Release() {};
 public:
 	void SetPop() { m_Pop = true; }
-	virtual const bool& GetDelete();
+	virtual const bool GetDelete();
 
 public:
 	const POINT& GetOldPos() { return m_OldPos; }

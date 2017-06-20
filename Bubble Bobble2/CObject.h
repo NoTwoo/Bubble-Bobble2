@@ -25,7 +25,7 @@ public:
 
 public:
 	void DeleteMe() { m_DeleteMe = true; }
-	virtual const bool& GetDelete() { return m_DeleteMe; }
+	virtual const bool GetDelete() { return m_DeleteMe; }
 public:
 	//virtual ~CObject() = 0;
 

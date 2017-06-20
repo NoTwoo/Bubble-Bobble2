@@ -24,6 +24,8 @@ void  CSceneManager::SetState(const SCENE_ID& a_SceneId)
 		m_Scene = new CStage4; m_SceneID = SCENE_ID::STAGE4;  m_NPC_NUM = NUM_OF_STAGE4_MONSTER_NUM; break;
 	case SCENE_ID::STAGE5:
 		m_Scene = new CStage5; m_SceneID = SCENE_ID::STAGE5;  m_NPC_NUM = NUM_OF_STAGE5_MONSTER_NUM; break;
+	case SCENE_ID::ENDING:
+		m_Scene = new CEnding; m_SceneID = SCENE_ID::ENDING; break;
 	case SCENE_ID::MENU_HELP:
 		m_Scene = new CHelp; m_SceneID = SCENE_ID::MENU_HELP; break;
 	case SCENE_ID::GAME_OVER:

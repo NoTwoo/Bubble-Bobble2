@@ -35,16 +35,18 @@ SCENE_ID CMenu::Update()
 {
 	this->ChangeMenuImg();
 
-		if (GetAsyncKeyState(VK_LBUTTON)) {
-			switch (m_MenuType) {
-			case MENUTYPE::NORMAL: return SCENE_ID::NOTHING;
-			case MENUTYPE::GAME_START: return SCENE_ID::STAGE3;
-			case MENUTYPE::REPLAY: return SCENE_ID::NOTHING;
-			case MENUTYPE::RANKING: return SCENE_ID::NOTHING;
-			case MENUTYPE::HELP: return SCENE_ID::MENU_HELP;
-			case MENUTYPE::MENU_EXIT: return SCENE_ID::GAME_EXIT;
-			}
+	if (GetAsyncKeyState(VK_LBUTTON)) {
+		switch (m_MenuType) {
+		case MENUTYPE::NORMAL: return SCENE_ID::NOTHING;
+		case MENUTYPE::GAME_START: return SCENE_ID::STAGE1;
+		case MENUTYPE::REPLAY: return SCENE_ID::NOTHING;
+		case MENUTYPE::RANKING: return SCENE_ID::NOTHING;
+		case MENUTYPE::HELP: return SCENE_ID::MENU_HELP;
+		case MENUTYPE::MENU_EXIT: return SCENE_ID::GAME_EXIT;
+		}
+
 	}
+	return NOTHING;
 }
 
 void CMenu::Render()

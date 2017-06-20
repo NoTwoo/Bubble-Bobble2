@@ -22,8 +22,6 @@ void CSoundManager::Release()
 }
 void CSoundManager::soundsetup()
 {
-	char str[128];
-
 	//사운드 시스템 생성
 	FMOD_System_Create(&this->g_psystem);
 	//채널 수 , 모드, 0
@@ -64,7 +62,7 @@ void CSoundManager::effsoundsetup()
 
 	//사운드 경로
 	for (int i = 0; i<EFFSD_END; i++){
-		sprintf_s(str, "Sound\\effsound%d.wav", i + 1, lstrlen(str));
+		sprintf(str, "Sound\\effsound%d.wav", i + 1);
 		FMOD_System_CreateSound(this->effg_psystem, (const char*)str, FMOD_DEFAULT, 0, &this->effg_psound[i]);
 	}
 	FMOD_System_CreateSound(this->effg_psystem, "Resources\\Sound\\Effects\\Attack\\Attack.mp3", FMOD_DEFAULT, 0, &this->effg_psound[EFFSOUNDKIND::ATTACK]);
@@ -90,8 +88,6 @@ void CSoundManager::effsoundoff()
 void CSoundManager::effplaysound(EFFSOUNDKIND esound)
 {
 	
-	FMOD_BOOL IsPlaying;
-
 	FMOD_System_PlaySound(this->effg_psystem, FMOD_CHANNEL_FREE, this->effg_psound[esound], 0, &this->effg_pchannel[esound]);
 	
 }

@@ -1,6 +1,6 @@
 #include "global.h"
 
-#pragma comment(linker , "/entry:WinMainCRTStartup /subsystem:console")
+//#pragma comment(linker , "/entry:WinMainCRTStartup /subsystem:console")
 
 CGameManager* CGameManager::m_instance = nullptr;
 

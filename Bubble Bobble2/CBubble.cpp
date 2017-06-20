@@ -165,9 +165,8 @@ void CBubble::Render()
 }
 
 
-const bool& CBubble::GetDelete()
+const bool CBubble::GetDelete()
 {
-
 	if (m_PopImgCnt > NUM_OF_BUBBLE_POP_IMG) {
 		if (m_Catch) {
 			CFactory<CFood> fact;

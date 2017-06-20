@@ -47,24 +47,14 @@
     <Filter Include="Game\GameManager\Object\Item">
       <UniqueIdentifier>{1c233eae-92ca-44dc-bc74-2c64aebddbc2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\GameManager\Object\Text">
-      <UniqueIdentifier>{d606035f-a78f-46bd-8dd0-1f18faf51ef7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Utility">
       <UniqueIdentifier>{db38e78e-005f-49b9-8b0d-3b0c6d9ea46c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Movie">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Game\SceneManager\Scene\Stage">
       <UniqueIdentifier>{771c5567-3623-4748-a30d-f8806adefcd9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\SceneManager\Scene\Menu">
       <UniqueIdentifier>{7714d625-0bfb-4856-bc4b-1dac5db44649}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\SceneManager\Scene\Intro">
-      <UniqueIdentifier>{2a353d2f-b74f-46f9-80d4-d3e1759a7092}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\GameManager\Object\Bubble">
       <UniqueIdentifier>{84ac89f5-bad7-4ddb-8110-ee1df2fbdfd0}</UniqueIdentifier>
@@ -80,6 +70,16 @@
     </Filter>
     <Filter Include="Game\SceneManager\Scene\GameOver">
       <UniqueIdentifier>{bc82946e-f088-438a-8e05-820ca2895c72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SceneManager\Movie">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game\SceneManager\Movie\Intro">
+      <UniqueIdentifier>{2a353d2f-b74f-46f9-80d4-d3e1759a7092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SceneManager\Movie\Ending">
+      <UniqueIdentifier>{67702d46-82b7-4dd1-81cd-82fd99cf5734}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -119,9 +119,6 @@
     <ClCompile Include="CNPC.cpp">
       <Filter>Game\GameManager\Object\Character\NPC</Filter>
     </ClCompile>
-    <ClCompile Include="CText.cpp">
-      <Filter>Game\GameManager\Object\Text</Filter>
-    </ClCompile>
     <ClCompile Include="CStage1.cpp">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
     </ClCompile>
@@ -129,7 +126,7 @@
       <Filter>Game\SceneManager\Scene\Menu</Filter>
     </ClCompile>
     <ClCompile Include="CIntro.cpp">
-      <Filter>Game\SceneManager\Scene\Intro</Filter>
+      <Filter>Game\SceneManager\Movie\Intro</Filter>
     </ClCompile>
     <ClCompile Include="CBubble.cpp">
       <Filter>Game\GameManager\Object\Bubble</Filter>
@@ -157,6 +154,9 @@
     </ClCompile>
     <ClCompile Include="CStage4.cpp">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnding.cpp">
+      <Filter>Game\SceneManager\Movie\Ending</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -199,9 +199,6 @@
     <ClInclude Include="CNPC.h">
       <Filter>Game\GameManager\Object\Character\NPC</Filter>
     </ClInclude>
-    <ClInclude Include="CText.h">
-      <Filter>Game\GameManager\Object\Text</Filter>
-    </ClInclude>
     <ClInclude Include="CScene.h">
       <Filter>Game\SceneManager\Scene</Filter>
     </ClInclude>
@@ -212,7 +209,7 @@
       <Filter>Game\SceneManager\Scene\Menu</Filter>
     </ClInclude>
     <ClInclude Include="CIntro.h">
-      <Filter>Game\SceneManager\Scene\Intro</Filter>
+      <Filter>Game\SceneManager\Movie\Intro</Filter>
     </ClInclude>
     <ClInclude Include="CCharacter.h">
       <Filter>Game\GameManager\Object\Character</Filter>
@@ -243,6 +240,9 @@
     </ClInclude>
     <ClInclude Include="CStage4.h">
       <Filter>Game\SceneManager\Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnding.h">
+      <Filter>Game\SceneManager\Movie\Ending</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
